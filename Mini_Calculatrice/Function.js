@@ -1,9 +1,20 @@
-function multi(p1, p2) {
-    return p1 * p2;   
-  }
-  function add(p1, p2) {
-    return p1 + p2;   
-  }
-  function div(p1, p2) {
-    return p1 / p2;   
-  }
+
+function calculer() 
+{ 
+    let a = document.getElementById("output").value 
+    let b = eval(a) 
+    document.getElementById("output").value = b 
+
+} 
+function afficher(val) 
+{ 
+   
+        document.getElementById("output").value+=val 
+    
+   
+} 
+function effacer() 
+{ 
+    document.getElementById("output").value = "" 
+} 
+
