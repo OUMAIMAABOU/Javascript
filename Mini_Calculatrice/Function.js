@@ -1,41 +1,57 @@
 
+const output=document.getElementById("output");
 function effacer() 
 { 
-    document.getElementById("output").value = "" 
+    output.value = "" 
 } 
 function calculer() 
 { 
-  
-    let b = eval( document.getElementById("output").value) 
-    document.getElementById("output").value = b 
-    
-  
 
+    let b = eval( output.value) 
+    output.value = b 
 } 
-function afficher(a) 
+function afficher(num) 
 { 
-   
-    var myString =  document.getElementById("output").value
+
+    var myString =  output.value
     var lastChar = myString[myString.length - 1]
     if (myString.length < 18) {
-     if (!isNaN(lastChar) || lastChar == null || !isNaN(num)) {
-        document.getElementById("output").value = myString + num
-     }else if(num != lastChar){
-        document.getElementById("output").value = myString.replace(lastChar, num)
-     }
-    }    
-   
+        if(num=='.' && !canIAddDot()  ){
+       
+            return;
+    
+    }
+    
+        else
+        if (!isNaN(lastChar) || lastChar == null || !isNaN(num)) {
+           output.value = myString + num 
+        }else{
+            output.value = myString.replace(lastChar, num)
+        }
+            
+        
+           
+        
+       
+    }
 } 
+
+   
+ 
+
 function del() 
-{ 
-    var exp = document.getElementById("output").value
-    document.getElementById("output").value = exp.substring(0,exp.length - 1);
-    
+{  
+    var exp = output.value
+    output.value = exp.substring(0,exp.length - 1);
+ }
+
+function canIAddDot(){
+    const regex=/(^\d+$)|(^(\d+\.{0,1}\d*)([*\-+\/]?(\d+\.?\d*))*[*\-+\/]\d+$)/gm;
    
-} 
-function afficher(num){
-    
-   }
+    return output.value.match(regex);
+}
+
+
 
 
 

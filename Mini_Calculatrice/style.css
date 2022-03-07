@@ -36,7 +36,7 @@ body{
 }
 .display-screen{
     background-color: #2b2b2b;
-    height: 112px;
+    height: 140px;
     width:289px;
 }
 button{
@@ -49,6 +49,10 @@ button{
     color: white;
     
 }
+#bg{
+    background-color: #5B84B0; 
+     color:white;
+}
 button:hover{
     cursor:pointer;
     background-color: #f686a6f5;
@@ -60,10 +64,11 @@ button:active{
 
 }
 .special-button{
-
+    width:136px;
     background-color: #5B84B0;
     border-radius:47%;
 }
+
 .button-radius{
 border-radius: 50%;
 background-color:#f686a6f5;
