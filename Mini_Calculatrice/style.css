@@ -10,7 +10,7 @@ body{
     align-items: center;
 }
 .wrapper{
-    height:444;
+    /* height:444; */
     width:289.4px;
     font-family: "Gotham Rounded", sans-serif;
     background-color: #2D323A;
@@ -49,6 +49,7 @@ button{
     color: white;
     
 }
+
 #bg{
     background-color: #5B84B0; 
      color:white;
@@ -70,12 +71,10 @@ button:active{
 }
 
 .button-radius{
-border-radius: 50%;
-background-color:#f686a6f5;
-color: #d6164d;
-box-shadow: 5px 4px 12px #727070c9;
-
-
+    border-radius: 50%;
+    background-color:#f686a6f5;
+    color: #d6164d;
+    box-shadow: 5px 4px 12px #727070c9;
 }
 .display{
     color:white;
